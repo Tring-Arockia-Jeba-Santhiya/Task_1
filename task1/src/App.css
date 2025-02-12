@@ -8,10 +8,11 @@
   justify-content: center;
   align-items: center;
   background-color: #0a3d91;
-  padding: 30px;
+  padding: 20px;
 }
 h1{
   text-align: center;
+  border: white dashed;
 }
 .fp{
   padding-top: 50px;
