@@ -10,7 +10,14 @@
   background-color: #0a3d91;
   padding: 30px;
 }
-
+h1{
+  text-align: center;
+}
+.fp{
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .form-inline {
   display: flex;
   padding-top: 10px;
@@ -21,13 +28,21 @@
   width: 100%; /* Ensure the inputs are wrapped properly */
   margin-bottom: 20px; /* Space between the rows */
 }
-
+.button submit{
+  border: none;
+  border-radius: 5px;
+  
+}
 .ad {
   width: 100%; /* Make the button container take up the whole width */
   text-align: right; /* Align the "Add" button to the right */
   margin-top: 20px; /* Space between rows and the add button */
 }
-
+.button.submit{
+  background-color: #28a745;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
 .button.add {
   background-color: #28a745;
   color: white;

@@ -14,7 +14,15 @@ const App = () => {
 
   // Add new form fields
   const addFormFields = () => {
-    setFormValues([...formValues, { name: '', location: '', college: '' }]);
+    const lastField = formValues[formValues.length - 1];
+
+    // Check if any of the fields are empty in the last form
+    if (!lastField.name || !lastField.location || !lastField.college) {
+      alert("Please fill in all the fields before adding another.");
+    } else {
+      // If all fields are filled, add a new field
+      setFormValues([...formValues, { name: '', location: '', college: '' }]);
+    }
   };
 
   // Remove form fields
@@ -31,7 +39,9 @@ const App = () => {
   };
 
   return (
-    <div className="main">
+    <div className='fp'>
+      <div className="main">
+        <h1>Basic Details</h1>
       <form onSubmit={handleSubmit}>
         <div className="ad">
           <button className="button add" type="button" onClick={addFormFields}>
@@ -71,8 +81,13 @@ const App = () => {
             )}
           </div>
         ))}
-
+        <div>
+        <div className="button-section">
+            <button className="button submit" type="submit">Submit</button>
+           </div>
+        </div>
       </form>
+    </div>
     </div>
   );
 };
